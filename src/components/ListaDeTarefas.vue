@@ -7,7 +7,7 @@ const props = defineProps(['tarefas'])
         <li class="list-group-item" v-for="tarefa in props.tarefas">
             <input @change="evento => tarefa.finalizada = evento.target.checked" :checked="tarefa.finalizada"
                 :id="tarefa.titulo" type="checkbox">
-            <label :class="{ done: tarefa.finalizada === true }" class="ms-3" :for="tarefa.titulo">
+            <label :class="{ done: tarefa.finalizada }" class="ms-3" :for="tarefa.titulo">
                 {{ tarefa.titulo }}
             </label>
         </li>
